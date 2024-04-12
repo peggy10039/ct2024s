@@ -178,14 +178,18 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      該次作業程式碼，請放在 https://github.com/<span style="color:red;">你的帳號</span>/ct2024s/hw<span style="color:red;">05</span>/src/ 檔案夾。
+      <a href="https://github.com/peggy10039/ct2024s/tree/3dfa2aee09448b9d4580c3b7087c05a1f417366a/hw06/src/upload" >simple檔案夾</a><br>
+      <th>Medium Baseline</th><br>
+      <a href="https://github.com/peggy10039/ct2024s/tree/3dfa2aee09448b9d4580c3b7087c05a1f417366a/hw06/src/upload" >Download for experiment_112C71002</a><br>
+      <th>Strong Baseline</th><br>
+      <a href="https://github.com/peggy10039/ct2024s/tree/3dfa2aee09448b9d4580c3b7087c05a1f417366a/hw06/src/upload" >Download for infer_112C71002</a>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      建立環境原來也是一件不簡單的事情，途中發生了好多事情，終於在最後發現問題在哪並解決了他，tensorflow版本不合的問題真的很擾人，有找到相同的環境跑模型真的方便很多，好像跑了超過兩天的時間才跑完，雖然最終訓練出來的字我沒看懂幾個，但也是非常感動，謝謝助教不厭其煩的回覆我問題，靠自己成功解決問題真的很開心。
     </div>
   </div>
 
@@ -201,30 +205,48 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
+          <td>Simple baseline - 產生訓練樣本 (4808字/2) (放入image_train，壓縮檔上傳)</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
+          <td id='m2'>2</td>
+          <td>Simple baseline - 產生驗證樣本 (4808字/2) (放入image_val，壓縮檔上傳)</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+          <td id='m3'>4</td>
+          <td>Medium baseline - 繳交字體的對比檔案 </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td id='m4'>2</td>
+          <td>Strong baseline - 最後生成結果 (於infer_1資料夾內)</td>
         </tr>
       </table>
     </div>
   </div>
 
+
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+    <table>
+      <td style="font-size: 25px;">Strong baseline - 最後生成結果 (於infer_112C71002資料夾內)</td>
+        <tr>
+          <td>
+            <img src="./01.jpg" height="600" width="1100">
+          </td>
+        </tr>
+        <td style="font-size: 25px;">Strong baseline - 最後生成結果 (於infer_112C71002資料夾內)</td>
+        <tr>
+          <td>
+            <img src="./02.jpg" height="600" width="1100">
+          </td>
+        </tr>
+    
+    </table>
     </div>
   </div>
 
@@ -265,6 +287,10 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
+    }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
     }
 
     d3.select("#myTotal").html(score);    
